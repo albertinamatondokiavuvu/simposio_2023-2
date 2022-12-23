@@ -27,6 +27,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <div style="margin-top:2%" style="padding: 0%" class="page-wrapper font-robo">
         <div class="wrapper wrapper--w960" style="padding: 0%">
             <div class="card card-2">

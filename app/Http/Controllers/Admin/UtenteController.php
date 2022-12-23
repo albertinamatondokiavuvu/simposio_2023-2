@@ -11,4 +11,5 @@ class UtenteController extends Controller
     {
         return view('utente.index');
     }
+
 }

@@ -36,6 +36,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
