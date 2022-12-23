@@ -21,14 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'telefone',
-       'Instituicao',
-       'pais',
-       'municipio',
-       'provincia',
-       'tipoParticpacao',
-       'InfoExame',
-       'PartipacaoExame',
+
     ];
 
     /**

@@ -50,9 +50,9 @@
           <div class="carousel-item active" style="background-image: url(/assets/img/slide/slide-1.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Shuffle</span></h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <a href="{{ route('register') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Inscreva-se</a>
+                <h2 class="animate__animated animate__fadeInDown"> Bem Vindo ao Simposio <span>Internacional</span></h2>
+                <p class="animate__animated animate__fadeInUp">(Re)Pensar a Politica Educativa Angolana, Um Olhar sobre os Exames Nacionais.</p>
+                <a href="{{ route('simposio') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Inscreva-se</a>
               </div>
             </div>
           </div>
@@ -61,23 +61,14 @@
           <div class="carousel-item" style="background-image: url(/assets/img/slide/slide-2.jpg);">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <a href="{{ route('register') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Inscreva-se</a>
+                <h2 class="animate__animated animate__fadeInDown">Simposio Internacional</h2>
+                <p class="animate__animated animate__fadeInUp">É um Evento que Visa...</p>
+                <a href="{{ route('simposio') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Inscreva-se</a>
               </div>
             </div>
           </div>
 
-          <!-- Slide 3 -->
-          <div class="carousel-item" style="background-image: url(/assets/img/slide/slide-3.jpg);">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <a href="{{ route('register') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Inscreva-se</a>
-              </div>
-            </div>
-          </div>
+
 
         </div>
 

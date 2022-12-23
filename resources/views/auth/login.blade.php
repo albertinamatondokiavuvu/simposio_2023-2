@@ -27,7 +27,9 @@
 
                     <div class="signin-form">
                         <h2 class="form-title">Login</h2>
-                        <form method="POST" class="register-form" id="login-form">
+                        <form method="POST" action="{{ route('login') }}"
+                            class="register-form" id="login-form">
+                            @csrf
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input class="form-control @error('email') is-invalid @enderror"  value="{{ old('email') }}" required autocomplete="email" name="email"  placeholder="exemplo@gmail.com"/>
