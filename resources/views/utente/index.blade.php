@@ -2,122 +2,161 @@
 <html lang="en">
 
 <head>
+    <!-- Required meta tags-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inscrição - Simposio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
 
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Title Page-->
+    <title>Simposio - inscrição</title>
 
-    <!-- Main css -->
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Icons font CSS-->
+    <link href="/inscrever/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="/inscrever/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- /inscrever/Vendor CSS-->
+    <link href="/inscrever/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/inscrever/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="/inscrever/css/main.css" rel="stylesheet" media="all">
 </head>
 
 <body>
+    <div style="margin-top:2%" style="padding: 0%" class="page-wrapper font-robo">
+        <div class="wrapper wrapper--w960" style="padding: 0%">
+            <div class="card card-2">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Informações para a Inscrição</h2>
+                    <form method="POST">
 
-    <div class="main">
-
-        <!-- Sign up form -->
-        <section class="signup">
-            <div class="container">
-                <div class="signup-content">
-                    <div class="signup-form">
-                        <h2 class="form-title">Inscrição</h2>
-                        <form method="POST" class="register-form" id="register-form">
-                            <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Your Name" />
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-2 " type="text" placeholder="Nome" name="nome">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Your Email" />
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-2 " type="email" placeholder="email@gmail.com" name="email">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="telefone"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="number" name="telefone" id="name" placeholder="9xxxxxxxx" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="instituicao"><i class="zmdi zmdi-email"></i></label>
-                                <input type="text" name="Instituicao" id="instituicao" placeholder="instituicao" />
-                            </div>
-                            <div class="form-group">
-                                <label for="pais"><i class="zmdi zmdi-email"></i></label>
-                                <input type="text" name="pais" id="pais" placeholder="pais" />
-                            </div>
-                            <div class="form-group">
-                                <label for="provincia"><i class="zmdi zmdi-email"></i></label>
-                                <input type="text" name="provincia" id="provincia" placeholder="provincia" />
-                            </div>
-                            <div class="form-group">
-                                <label for="municipio"><i class="zmdi zmdi-email"></i></label>
-                                <input type="text" name="municipio" id="municipio" placeholder="municipio" />
-                            </div>
-
-                        </form>
-                    </div>
-                    <div class="signup-image">
-                       <br>
-                       <br>
-                        <div class="form-group">
-                            <p for="InfoExame">Já ouviu falar dos Exames Nacionais?, Por quais meios?</p>
-                            <table>
-                                <tr>
-                                    <td > Rádio <input type="radio" name="InfoExame" value="Radio" id="">
-                                    </td>
-                                    <td >Televisão <input type="radio" name="InfoExame" value="televisao"
-                                            id=""></td>
-                                    <td >Redes Sociais <input type="radio" name="InfoExame" value="redes sociais"
-                                            id=""></td>
-                                    <td > Outros <input type="radio" name="InfoExame" value="outros"
-                                            id=""></td>
-                                </tr>
-                            </table>
                         </div>
-                        <div class="form-group">
-                            <p for="tipoParticpacao">Como pretende participar?</p>
-                            <table>
-                                <tr>
-                                    <td> Presencial <input type="radio" name="tipoParticpacao" value="Presencial"
-                                            id=""></td>
-                                    <td>Distância <input type="radio" name="tipoParticpacao" value="Distância"
-                                            id=""></td>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-2 " type="number" placeholder="9xxxxx" name="telefone">
 
-                                </tr>
-                            </table>
+                                </div>
+                            </div>
+                            <div class="col-2">
 
+                                <div class="input-group">
+                                    <div class="rs-select2 ">
+                                        <input class="input--style-2 " type="text" placeholder="Instituicao" name="Instituicao">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+
+                                <div class="input-group">
+                                    <input class="input--style-2 " type="text" placeholder="pais" name="pais">
+
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input class="input--style-2 " type="text" placeholder="municipio" name="municipio">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+
+                                <div class="input-group">
+                                    <input class="input--style-2 " type="text" placeholder="provincia" name="provincia">
+
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="tipoParticpacao">
+                                            <option disabled="disabled" selected="selected">Participação</option>
+                                            <option>Presencial</option>
+                                            <option>Distância</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="InfoExame">
+                                            <option disabled="disabled" selected="selected">Como ficou a saber dos exames Nacionais</option>
+                                            <option>Rádio</option>
+                                            <option>Televisão</option>
+                                            <option>Redes Sociais</option>
+                                            <option>Outros</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="PartipacaoExame">
+                                            <option disabled="disabled" selected="selected">Participou dos exames nacios no ano lectivo 2021-2022?</option>
+                                            <option>Sim</option>
+                                            <option>Não</option>
+
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <p>Participou dos Exames Nacionais do ano lectivo 2021-2022 ?</p>
-                            <table>
-                                <tr>
-                                    <td> Sim <input type="radio" name="PartipacaoExame" value="sim"
-                                            id=""></td>
-                                    <td>Não <input type="radio" name="PartipacaoExame" value="não"
-                                            id=""></td>
 
-                                </tr>
-                            </table>
-
+                        <div class="p-t-30">
+                            <button class="btn btn--radius btn--green" type="submit">Inscrever</button>
                         </div>
-
-                        <div class="form-group form-button">
-                            <input type="submit" name="signup" id="signup" class="form-submit"
-                                value="Inscrever-se" />
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </section>
-
-
+        </div>
     </div>
 
-    <!-- JS -->
-    <script src="/vendor/jquery/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
+    <!-- Jquery JS-->
+    <script src="/inscrever/vendor/jquery/jquery.min.js"></script>
+    <!-- /inscrever/Vendor JS-->
+    <script src="/inscrever/vendor/select2/select2.min.js"></script>
+    <script src="/inscrever/vendor/datepicker/moment.min.js"></script>
+    <script src="/inscrever/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="/inscrever/js/global.js"></script>
+
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
+<!-- end document-->
