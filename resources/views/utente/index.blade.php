@@ -34,8 +34,14 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Informações para a Inscrição</h2>
-                    <form method="POST">
-
+                        
+                        @if(session('success'))
+                            <div id="sucesso">
+                                {{session('success')}}
+                            </div>
+                        @endif
+                    <form action="{{route('simposio_cadastrar')}}" method="post">
+                    {{ csrf_field() }}                        
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
@@ -45,7 +51,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <input class="input--style-2 " type="email" placeholder="email@gmail.com" name="email">
+                                        <input class="input--style-2 " type="text" placeholder="fulano@gmail.com" name="email">
                                     </div>
                                 </div>
                             </div>
@@ -53,7 +59,7 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2 " type="number" placeholder="9xxxxx" name="telefone">
+                                    <input class="input--style-2 " type="number" placeholder="9xx xxx xxx" name="telefone">
 
                                 </div>
                             </div>
@@ -70,7 +76,7 @@
                             <div class="col-2">
 
                                 <div class="input-group">
-                                    <input class="input--style-2 " type="text" placeholder="pais" name="pais">
+                                    <input class="input--style-2 " type="text" placeholder="País" name="pais">
 
                                 </div>
                             </div>
@@ -78,7 +84,7 @@
                                 <div class="input-group">
 
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <input class="input--style-2 " type="text" placeholder="municipio" name="municipio">
+                                        <input class="input--style-2 " type="text" placeholder="Municipio" name="municipio">
 
                                     </div>
                                 </div>
@@ -88,7 +94,7 @@
                             <div class="col-2">
 
                                 <div class="input-group">
-                                    <input class="input--style-2 " type="text" placeholder="provincia" name="provincia">
+                                    <input class="input--style-2 " type="text" placeholder="Provincia" name="provincia">
 
                                 </div>
                             </div>
@@ -142,11 +148,36 @@
                             <button class="btn btn--radius btn--green" type="submit">Inscrever</button>
                         </div>
                     </form>
+                    <br>
+                    @if ($errors->any())
+                            <div id="messagem_erro">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li style="color:#fff">{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                 </div>
             </div>
         </div>
     </div>
-
+    <style>
+        #sucesso{
+            background-color:green; 
+            border-radius: 10px;
+            opacity: 50%;
+            padding: 5px;
+            text-indent: center;
+            color:#fff
+        }
+        #messagem_erro{
+            background-color:red; 
+            border-radius: 10px;
+            opacity: 20%;
+            padding: 5px;
+        }
+    </style>
     <!-- Jquery JS-->
     <script src="/inscrever/vendor/jquery/jquery.min.js"></script>
     <!-- /inscrever/Vendor JS-->
