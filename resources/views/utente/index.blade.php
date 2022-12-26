@@ -34,18 +34,26 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Informações para a Inscrição</h2>
-                    <form method="POST">
+                    @if (isset($errors) && count($errors) > 0)
+                    <div style="color: red" class="text-center mt-4 mb-4 alert-danger">
+                        @foreach ($errors->all() as $erro)
+                        <h5>* {{ $erro }}</h5>
+                        @endforeach
+                    </div>
+                    @endif
+                    <form method="POST" action="{{ route('confirm_insc') }}">
+                    @csrf
 
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2 " type="text" placeholder="Nome" name="nome">
+                                    <input  value="{{ old('nome') }}" class="input--style-2 " type="text" placeholder="Nome" name="nome">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <input class="input--style-2 " type="email" placeholder="email@gmail.com" name="email">
+                                        <input class="input--style-2"  value="{{ old('email') }}" type="email" placeholder="email@gmail.com" name="email">
                                     </div>
                                 </div>
                             </div>
@@ -53,7 +61,7 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2 " type="number" placeholder="9xxxxx" name="telefone">
+                                    <input   value="{{ old('telefone') }}" class="input--style-2 " type="number" placeholder="9xxxxx" name="telefone">
 
                                 </div>
                             </div>
@@ -61,7 +69,7 @@
 
                                 <div class="input-group">
                                     <div class="rs-select2 ">
-                                        <input class="input--style-2 " type="text" placeholder="Instituicao" name="Instituicao">
+                                        <input   value="{{ old('Instituicao') }}" class="input--style-2 " type="text" placeholder="Instituicao" name="Instituicao">
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +78,7 @@
                             <div class="col-2">
 
                                 <div class="input-group">
-                                    <input class="input--style-2 " type="text" placeholder="pais" name="pais">
+                                    <input   value="{{ old('pais') }}" class="input--style-2 " type="text" placeholder="pais" name="pais">
 
                                 </div>
                             </div>
@@ -78,7 +86,7 @@
                                 <div class="input-group">
 
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <input class="input--style-2 " type="text" placeholder="municipio" name="municipio">
+                                        <input   value="{{ old('municipio') }}" class="input--style-2 " type="text" placeholder="municipio" name="municipio">
 
                                     </div>
                                 </div>
@@ -88,7 +96,7 @@
                             <div class="col-2">
 
                                 <div class="input-group">
-                                    <input class="input--style-2 " type="text" placeholder="provincia" name="provincia">
+                                    <input   value="{{ old('provincia') }}" class="input--style-2 " type="text" placeholder="provincia" name="provincia">
 
                                 </div>
                             </div>
@@ -96,8 +104,8 @@
                                 <div class="input-group">
 
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="tipoParticpacao">
-                                            <option disabled="disabled" selected="selected">Participação</option>
+                                        <select value="{{ old('tipoParticpacao') }}" name="tipoParticpacao">
+                                            <option  disabled="disabled" selected="selected">Participação</option>
                                             <option>Presencial</option>
                                             <option>Distância</option>
                                         </select>
@@ -111,8 +119,8 @@
 
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="InfoExame">
-                                            <option disabled="disabled" selected="selected">Como ficou a saber dos exames Nacionais</option>
+                                        <select  value="{{ old('InfoExame') }}" name="InfoExame">
+                                            <option    disabled="disabled" selected="selected">Como ficou a saber dos exames Nacionais</option>
                                             <option>Rádio</option>
                                             <option>Televisão</option>
                                             <option>Redes Sociais</option>
@@ -125,8 +133,8 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="PartipacaoExame">
-                                            <option disabled="disabled" selected="selected">Participou dos exames nacios no ano lectivo 2021-2022?</option>
+                                        <select  value="{{ old('PartipacaoExame') }}" name="PartipacaoExame">
+                                            <option   disabled="disabled" selected="selected">Participou dos exames nacios no ano lectivo 2021-2022?</option>
                                             <option>Sim</option>
                                             <option>Não</option>
 
