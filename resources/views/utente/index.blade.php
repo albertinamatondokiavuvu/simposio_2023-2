@@ -176,6 +176,15 @@
 
     <!-- Main JS-->
     <script src="/inscrever/js/global.js"></script>
+    <script src="/src/plugins/sweetalert2/sweetalert2.all.js"></script>
+    <script src="/src/plugins/sweetalert2/sweet-alert.init.js"></script>
+    @if (session('utenteadd'))
+        <script>
+            swal('Bom trabalho!', 'Inscrição feita com sucesso', 'success', {
+                button: 'Ok'
+            })
+        </script>
+    @endif
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 

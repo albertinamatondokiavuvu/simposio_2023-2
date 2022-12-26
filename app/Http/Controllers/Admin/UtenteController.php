@@ -41,7 +41,7 @@ class UtenteController extends Controller
             ],
             $mensagens
         );
-            $t = Utente::create([
+           Utente::create([
                'nome'=>$request->nome,
                'email'=>$request->email,
                'PartipacaoExame'=>$request->PartipacaoExame,
@@ -53,8 +53,9 @@ class UtenteController extends Controller
                'Instituicao'=>$request->Instituicao,
                 'telefone'=>$request->telefone,
             ]);
-            return redirect()->back();
+            return redirect()->back()->with('utenteadd','1');
 
     }
+
 
 }
