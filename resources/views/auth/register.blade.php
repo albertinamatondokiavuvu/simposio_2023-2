@@ -23,12 +23,22 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Inscrição</h2>
-                        <form method="POST" action="{{ route('register') }}"
+                        @if ($errors->any())
+                            <div id="messagem_erro">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li style="color:#fff">{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <form action="{{route('register')}}" method="post"
                             class="register-form" id="register-form">
                             @csrf
+
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Your Name" />
+                                <input type="text" name="name" id="name" placeholder="Nome de Usário" />
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
@@ -57,7 +67,7 @@
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit"
-                                    value="Register" />
+                                    value="Registar-se" />
                             </div>
                         </form>
                     </div>
@@ -71,6 +81,14 @@
 
 
     </div>
+    <style>
+        #messagem_erro{
+            background-color:red; 
+            border-radius: 10px;
+            opacity: 20%;
+            padding: 5px;
+        }
+    </style>
 
     <!-- JS -->
     <script src="/vendor/jquery/jquery.min.js"></script>

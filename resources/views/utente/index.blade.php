@@ -34,6 +34,7 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Informações para a Inscrição</h2>
+
                     @if (isset($errors) && count($errors) > 0)
                     <div style="color: red" class="text-center mt-4 mb-4 alert-danger">
                         @foreach ($errors->all() as $erro)
@@ -43,6 +44,7 @@
                     @endif
                     <form method="POST" action="{{ route('confirm_insc') }}">
                     @csrf
+
 
                         <div class="row row-space">
                             <div class="col-2">
@@ -150,6 +152,16 @@
                             <button class="btn btn--radius btn--green" type="submit">Inscrever</button>
                         </div>
                     </form>
+                    <br>
+                    @if ($errors->any())
+                            <div id="messagem_erro">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li style="color:#fff">{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                 </div>
             </div>
         </div>
