@@ -56,6 +56,10 @@ class UtenteController extends Controller
             return redirect()->back()->with('utenteadd','1');
 
     }
-
+    public function visualizar()
+    {
+        $utentes = Utente::get();
+        return view('utente.visualizar.index', compact('utentes'))->with();
+    }
 
 }
