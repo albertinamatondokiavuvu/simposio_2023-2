@@ -228,4 +228,3 @@ function toggleFullScreen() {
     }
 }
 
-$("body").append('');var $window=$(window),nav=$(".fixed-button");

@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Utente;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 class UtenteController extends Controller
 {
@@ -53,13 +53,72 @@ class UtenteController extends Controller
                'Instituicao'=>$request->Instituicao,
                 'telefone'=>$request->telefone,
             ]);
-            return redirect()->back()->with('utenteadd','1');
+            $data["bootstrap"] = file_get_contents("css/utentes/bootstrap.min.css");
+            $data["css"] = file_get_contents("css/utentes/style.css");
+            $mpdf = new \Mpdf\Mpdf([
+                'mode' => 'utf-8', 'margin_top' => 0,
+                'margin_left' => 5,
+                'margin_right' => 0, 'margin_bottom' => 0, 'format' => [297, 210]
+            ]);
+            $mpdf->SetFont("arial");
+            $mpdf->setHeader();
+            $mpdf->AddPage('L');
+            $html = view("pdfs/convite", $data);
+            $mpdf->writeHTML($html);
+            Storage::put('pdfs/convite.pdf',$mpdf->Output());
+            Mail::send('mail.index', array(
+
+                'name' =>$request->nome,
+                'email' => $request->email,
+             ), function($message) use ($request){
+                 $message->from('simposio_exame_nacional@inade.gov.ao', 'Simposio Internacional');
+                 $message->to($request->email)->subject('Envio de confirmação e do convite');
+                 $message->attachData(Storage::get('pdfs/convite.pdf'));
+             });
+
+
+             return redirect()->back()->with('utenteadd','1');
 
     }
-    public function visualizar()
+    public function list($id)
     {
-        $utentes = Utente::get();
-        return view('utente.visualizar.index', compact('utentes'))->with();
+       $utentes = Utente::find($id);
+       return view('utente.list.index',compact('utentes'));
     }
-
+    public function cartao($id)
+    {
+        $testi = Utente::find($id);
+         $data['utentes'] = $testi;
+        $data["bootstrap"] = file_get_contents("css/utentes/bootstrap.min.css");
+        $data["css"] = file_get_contents("css/utentes/style.css");
+        $mpdf = new \Mpdf\Mpdf([
+            'mode' => 'utf-8', 'margin_top' => 0,
+            'margin_left' => 0,
+            'margin_right' => 0, 'margin_bottom' => 0, 'format' => [50, 80]
+        ]);
+        $mpdf->SetFont("arial");
+        $mpdf->setHeader();
+        $mpdf->AddPage('L');
+        $html = view("pdfs/cartao", $data);
+        $mpdf->writeHTML($html);
+        $mpdf->Output("utente.pdf", "I");
+    }
+    public function certificado($id)
+    {
+        $testi = Utente::find($id);
+         $data['utentes'] = $testi;
+        $data["bootstrap"] = file_get_contents("css/utentes/bootstrap.min.css");
+        $data["css"] = file_get_contents("css/utentes/style.css");
+        $mpdf = new \Mpdf\Mpdf([
+            'mode' => 'utf-8', 'margin_top' => 0,
+            'margin_left' => 0,
+            'margin_right' => 0, 'margin_bottom' => 0, 'format' => [210, 297]
+        ]);
+        $mpdf->SetFont("arial");
+        $mpdf->setHeader();
+        $mpdf->AddPage('L');
+        $html = view("pdfs/certificado", $data);
+        $mpdf->writeHTML($html);
+        $mpdf->Output("utente.pdf", "I");
+    }
 }

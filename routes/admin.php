@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\UtenteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth')->group(function () {
-
-
+Route::get('/simposio/listar/{id}',[UtenteController::class,'list'])->name('listarSimposio');
+Route::get('/simposio/cartao/{id}',[UtenteController::class,'cartao'])->name('cartaoSimposio');
+Route::get('/simposio/certificado/{id}',[UtenteController::class,'certificado'])->name('certificadoSimposio');
 });

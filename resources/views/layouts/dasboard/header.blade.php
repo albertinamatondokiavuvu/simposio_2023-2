@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <a href="{{ route('inicio') }}">
-                            <img class="img-fluid" src="/dashboard/assets/images/logo.png" alt="Theme-Logo" />
+                            <p style="color: orange">Simpósio Internacional</p>
                         </a>
                         <a class="mobile-options waves-effect waves-light">
                             <i class="ti-more"></i>
@@ -181,23 +181,13 @@
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="active">
                                     <a href="{{ route('home') }}" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
                                         <span class="pcoded-mtext">Dashboard</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
                             </ul>
 
-                            <div class="pcoded-navigation-label">Usuários Inscritos</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="">
-                                    <a href="form-elements-component.html" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                        <span class="pcoded-mtext">Visualizar</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                            </ul>
 
                         </div>
                     </nav>
