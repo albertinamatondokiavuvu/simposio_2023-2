@@ -39,26 +39,48 @@
                                 <div class="row">
                                     <div class="col-xl-4 col-md-6">
                                         <h6>Usuários Presenciais</h6>
-                                        <h5 class="m-b-30 f-w-700">{{ $presencial }}<span class="text-c-green m-l-10">de {{ $total }} inscritos</span>
+                                        <h5 class="m-b-30 f-w-700">@isset($presencial)
+                                            {{ $presencial }}
+                                        @endisset<span class="text-c-green m-l-10">de @isset($total)
+                                            {{ $total }}
+                                        @endisset inscritos</span>
                                         </h5>
                                         <div class="progress">
-                                            <div class="progress-bar bg-c-red" style="width:{{($presencial* 100)/$total }}%"></div>
+                                            <div class="progress-bar bg-c-red" style="width:@isset($presencial)
+                                                {{ ($presencial* 100)/$total }}%
+                                                @else
+                                                0%
+                                            @endisset "></div>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-md-6">
                                         <h6>Usuários à distância</h6>
-                                        <h5 class="m-b-30 f-w-700">{{ $distancia }}<span class="text-c-blue m-l-10">de {{ $total }} inscritos</span>
+                                        <h5 class="m-b-30 f-w-700">@isset($distancia)
+                                            {{ $distancia }}
+                                        @endisset<span class="text-c-blue m-l-10">de @isset($total)
+                                            {{ $total }}
+                                        @endisset inscritos</span>
                                         </h5>
                                         <div class="progress">
-                                            <div class="progress-bar bg-c-blue" style="width:{{($distancia* 100)/$total }}%"></div>
+                                            <div class="progress-bar bg-c-blue" style="width:@isset($distancia)
+                                                {{ ($distancia* 100)/$total }}%
+                                                @else
+                                                0%
+                                            @endisset"></div>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-md-6">
                                         <h6>Total de Usuários Inscritos</h6>
-                                        <h5 class="m-b-30 f-w-700">{{ $total }}<span class="text-c-green m-l-10">para 200 pessoas</span>
+                                        <h5 class="m-b-30 f-w-700">@isset($total)
+                                            {{ $total }}
+                                        @endisset<span class="text-c-green m-l-10">para 200 pessoas</span>
                                         </h5>
                                         <div class="progress">
-                                            <div class="progress-bar bg-c-green" style="width:{{ ($total*100 )/200 }}%"></div>
+                                            <div class="progress-bar bg-c-green" style="width:@isset($total)
+                                                {{( $total*100 )/200 }}%
+                                                @else
+                                                0%
+                                            @endisset"></div>
                                         </div>
                                     </div>
 
@@ -98,6 +120,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @isset($utentes)
+
+
                                             @foreach ($utentes as $utentes)
                                                 <tr>
                                                     <td>{{ ++$i }}</td>
@@ -132,6 +157,7 @@
                                                     </td>
                                                 </tr>
                                             @endforeach
+                                            @endisset
                                         </tbody>
                                     </table>
 

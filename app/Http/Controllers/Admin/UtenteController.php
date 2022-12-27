@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Utente;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 class UtenteController extends Controller
@@ -55,28 +56,19 @@ class UtenteController extends Controller
             ]);
             $data["bootstrap"] = file_get_contents("css/utentes/bootstrap.min.css");
             $data["css"] = file_get_contents("css/utentes/style.css");
-            $mpdf = new \Mpdf\Mpdf([
-                'mode' => 'utf-8', 'margin_top' => 0,
-                'margin_left' => 5,
-                'margin_right' => 0, 'margin_bottom' => 0, 'format' => [297, 210]
-            ]);
-            $mpdf->SetFont("arial");
-            $mpdf->setHeader();
-            $mpdf->AddPage('L');
-            $html = view("pdfs/convite", $data);
-            $mpdf->writeHTML($html);
-            Storage::put('pdfs/convite.pdf',$mpdf->Output());
+
+            $pdf = PDF::Loadview("pdfs/convite", $data)->setPaper('a4', 'landscape');
             Mail::send('mail.index', array(
 
                 'name' =>$request->nome,
                 'email' => $request->email,
-             ), function($message) use ($request){
-                 $message->from('simposio_exame_nacional@inade.gov.ao', 'Simposio Internacional');
-                 $message->to($request->email)->subject('Envio de confirmação e do convite');
-                 $message->attachData(Storage::get('pdfs/convite.pdf'));
+             ), function($message) use ($request,$pdf){
+                 $message->from('simposio_exame_nacional@inade.gov.ao', 'Simposio Internacional')
+                 ->to($request->email)
+                 ->subject('Envio de confirmação e do convite')
+                 ->attachData($pdf->output(),"convite.pdf");
+
              });
-
-
              return redirect()->back()->with('utenteadd','1');
 
     }
@@ -94,7 +86,7 @@ class UtenteController extends Controller
         $mpdf = new \Mpdf\Mpdf([
             'mode' => 'utf-8', 'margin_top' => 0,
             'margin_left' => 0,
-            'margin_right' => 0, 'margin_bottom' => 0, 'format' => [50, 80]
+            'margin_right' => 0, 'margin_bottom' => 0, 'format' => [90, 48]
         ]);
         $mpdf->SetFont("arial");
         $mpdf->setHeader();

@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inscrição</title>
-
+    <title>Cadastro</title>
+    <link href="/images/Logo_Simposio.png" rel="icon">
+    <link href="/images/Logo_Simposio.png" rel="apple-touch-icon">
     <!-- Font Icon -->
     <link rel="stylesheet" href="/fonts/material-icon/css/material-design-iconic-font.min.css">
 
@@ -66,13 +67,13 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                             <div class="form-group form-button">
-                                <input type="submit" name="signup" id="signup" class="form-submit"
+                                <input  type="submit" name="signup" id="signup" class="form-submit"
                                     value="Registar-se" />
                             </div>
                         </form>
                     </div>
                     <div class="signup-image">
-                        <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                        <figure><img src="images/Logo_Simposio.png" alt="sing up image"></figure>
 
                     </div>
                 </div>
@@ -81,14 +82,6 @@
 
 
     </div>
-    <style>
-        #messagem_erro{
-            background-color:red;
-            border-radius: 10px;
-            opacity: 20%;
-            padding: 5px;
-        }
-    </style>
 
     <!-- JS -->
     <script src="/vendor/jquery/jquery.min.js"></script>

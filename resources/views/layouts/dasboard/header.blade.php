@@ -3,6 +3,8 @@
 
 <head>
     <title>Simposio - @yield('title')</title>
+    <link href="/images/Logo_Simposio.png" rel="icon">
+    <link href="/images/Logo_Simposio.png" rel="apple-touch-icon">
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -114,7 +116,7 @@
                             </div>
                         </div>
                         <a href="{{ route('inicio') }}">
-                            <p style="color: orange">Simpósio Internacional</p>
+                            <p >Simpósio Internacional</p>
                         </a>
                         <a class="mobile-options waves-effect waves-light">
                             <i class="ti-more"></i>

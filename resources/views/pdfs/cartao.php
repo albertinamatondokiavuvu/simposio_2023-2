@@ -13,7 +13,7 @@
 </head>
 
 <body style="font-size: 12pt; font-family:Georgia, 'Times New Roman', Times, serif;">
-<p>cartão da actividade de simposio</p>
+
 </body>
 
 </html>

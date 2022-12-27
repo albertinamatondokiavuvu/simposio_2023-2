@@ -15,7 +15,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #1bbca3;
+  color: orange;
 }
 
 a:hover {
@@ -42,7 +42,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #1bbca3;
+  background: orange;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -106,7 +106,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -151,12 +151,12 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #1bbca3;
+  color: orange;
 }
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  background: #1bbca3;
+  background: orange;
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
@@ -202,7 +202,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #1bbca3;
+  color: orange;
 }
 
 .navbar .dropdown:hover>ul {
@@ -235,7 +235,7 @@ h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #58716d;
@@ -301,7 +301,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #1bbca3;
+  color: orange;
 }
 
 .navbar-mobile .getstarted,
@@ -336,7 +336,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #1bbca3;
+  color: orange;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -450,7 +450,7 @@ h6 {
 }
 
 #hero .carousel-indicators .active {
-  background-color: #1bbca3;
+  background-color: orange;
 }
 
 #hero .btn-get-started {
@@ -467,11 +467,11 @@ h6 {
   color: #fff;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  border: 2px solid #1bbca3;
+  border: 2px solid orange;
 }
 
 #hero .btn-get-started:hover {
-  background: #1bbca3;
+  background: orange;
   color: #fff;
   text-decoration: none;
 }
@@ -593,7 +593,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #1bbca3;
+  color: orange;
 }
 
 .about .content p:last-child {
@@ -629,7 +629,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #1bbca3;
+  background-color: orange;
 }
 
 /*--------------------------------------------------------------
@@ -645,7 +645,7 @@ section {
 .counts .count-box i {
   display: block;
   font-size: 34px;
-  color: #1bbca3;
+  color: orange;
   float: left;
   line-height: 0;
 }
@@ -708,7 +708,7 @@ section {
 }
 
 .services .icon-box:hover::before {
-  background: #1bbca3;
+  background: orange;
   right: 0;
   top: 0;
   width: 100%;
@@ -724,7 +724,7 @@ section {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background: #1bbca3;
+  background: orange;
   transition: all 0.3s ease-in-out;
 }
 
@@ -760,7 +760,7 @@ section {
 }
 
 .services .icon-box:hover .icon i {
-  color: #1bbca3;
+  color: orange;
 }
 
 /*--------------------------------------------------------------
@@ -792,13 +792,13 @@ section {
   border-radius: 25px;
   transition: 0.5s;
   margin-top: 10px;
-  border: 2px solid #1bbca3;
+  border: 2px solid orange;
   color: #fff;
 }
 
 .cta .cta-btn:hover {
-  background: #1bbca3;
-  border: 2px solid #1bbca3;
+  background: orange;
+  border: 2px solid orange;
 }
 
 /*--------------------------------------------------------------
@@ -826,18 +826,18 @@ section {
 }
 
 .more-services .card-title a:hover {
-  color: #1bbca3;
+  color: orange;
 }
 
 .more-services .btn {
   border-radius: 50px;
   padding: 4px 30px 6px 30px;
-  border: 2px solid #1bbca3;
+  border: 2px solid orange;
 }
 
 .more-services .btn:hover {
   color: #fff;
-  background: #1bbca3;
+  background: orange;
 }
 
 /*--------------------------------------------------------------
@@ -903,7 +903,7 @@ section {
 }
 
 .info-box .accordion-list a:hover {
-  color: #1bbca3;
+  color: orange;
 }
 
 .info-box .accordion-list span {
@@ -934,7 +934,7 @@ section {
 }
 
 .info-box .accordion-list a.collapsed:hover {
-  color: #1bbca3;
+  color: orange;
 }
 
 .info-box .accordion-list a.collapsed .icon-show {
@@ -1002,7 +1002,7 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #1bbca3;
+  color: orange;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1114,11 +1114,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #1bbca3;
+  border: 1px solid orange;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #1bbca3;
+  background-color: orange;
 }
 
 .portfolio-details .portfolio-info {
@@ -1224,7 +1224,7 @@ section {
 }
 
 .team .member .social a:hover {
-  color: #1bbca3;
+  color: orange;
 }
 
 .team .member .social i {
@@ -1356,7 +1356,7 @@ section {
 
 .contact .php-email-form input::focus,
 .contact .php-email-form textarea::focus {
-  background-color: #1bbca3;
+  background-color: orange;
 }
 
 .contact .php-email-form input {
@@ -1369,14 +1369,14 @@ section {
 
 .contact .php-email-form button[type=submit] {
   background: #fff;
-  border: 2px solid #1bbca3;
+  border: 2px solid orange;
   padding: 10px 24px;
-  color: #1bbca3;
+  color: orange;
   transition: 0.4s;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #1bbca3;
+  background: orange;
   color: #fff;
 }
 
@@ -1464,7 +1464,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #1bbca3;
+  background: orange;
   color: #fff;
   text-decoration: none;
 }
@@ -1538,7 +1538,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #1bbca3;
+  background: orange;
   color: #fff;
   transition: 0.3s;
   border-radius: 4;
@@ -1559,3 +1559,4 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
