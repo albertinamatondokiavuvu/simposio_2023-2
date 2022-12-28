@@ -12,8 +12,8 @@
     </style>
 </head>
 
-<body style="font-size: 12pt; font-family:Georgia, 'Times New Roman', Times, serif;">
-
+<body style="font-size: 12pt; font-family:Georgia, 'Times New Roman', Times, serif; background-image:url('images/Prancheta 22.png'); background-repeat: no-repeat;">
+<img style="margin-top: 103%; margin-left:23px;" src="images/qrcode.svg">
 </body>
 
 </html>

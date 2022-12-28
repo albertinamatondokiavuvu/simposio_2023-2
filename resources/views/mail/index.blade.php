@@ -10,7 +10,7 @@
        <div class="card">
         <div class="card-body" >
             <h2>Olá sr(a). {{ $name }}</h2>
-            <p>Agradecemos por teres feito a sua incrição.</p>
+            <p>Agradecemos por teres feito a sua inscrição.</p>
             <p style="margin-top: 1%;">Em anexo o seu convite</p>
             <p style="text-align:center;margin-top:10%;"></p>
         </div>

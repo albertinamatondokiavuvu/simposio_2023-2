@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Utente;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
@@ -77,16 +78,23 @@ class UtenteController extends Controller
        $utentes = Utente::find($id);
        return view('utente.list.index',compact('utentes'));
     }
+    public function listUtente($id)
+    {
+       $utentes = Utente::find($id);
+       return view('utente.index.index', compact('utentes'));
+    }
     public function cartao($id)
     {
+
         $testi = Utente::find($id);
          $data['utentes'] = $testi;
+         $data['qrcode'] = QrCode::size(200)->generate(url('list_utente/'. $testi->id), public_path('images/qrcode.svg'));
         $data["bootstrap"] = file_get_contents("css/utentes/bootstrap.min.css");
         $data["css"] = file_get_contents("css/utentes/style.css");
         $mpdf = new \Mpdf\Mpdf([
             'mode' => 'utf-8', 'margin_top' => 0,
             'margin_left' => 0,
-            'margin_right' => 0, 'margin_bottom' => 0, 'format' => [90, 48]
+            'margin_right' => 0, 'margin_bottom' => 0, 'format' => [250, 155]
         ]);
         $mpdf->SetFont("arial");
         $mpdf->setHeader();

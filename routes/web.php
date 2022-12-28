@@ -20,4 +20,4 @@ Route::get('/', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/inscricao-simposio',[UtenteController::class,'index'])->name('simposio');
 Route::post('/inscricao-simposio/confirmacao', [UtenteController::class, 'store'])->name('confirm_insc');
-
+Route::get('list_utente/{id}',[UtenteController::class,'listUtente'])->name('list_utente');
