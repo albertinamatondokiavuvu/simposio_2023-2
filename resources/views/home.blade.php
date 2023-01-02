@@ -46,11 +46,12 @@
                                         @endisset inscritos</span>
                                         </h5>
                                         <div class="progress">
-                                            <div class="progress-bar bg-c-red" style="width:@isset($presencial)
-                                                {{ ($presencial* 100)/$total }}%
+                                            <div class="progress-bar bg-c-red" style="width:
+                                            @if($presencial!= null)
+                                                {{ ($presencial*100)/$total }}%
                                                 @else
                                                 0%
-                                            @endisset "></div>
+                                            @endif"></div>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-md-6">
@@ -62,11 +63,11 @@
                                         @endisset inscritos</span>
                                         </h5>
                                         <div class="progress">
-                                            <div class="progress-bar bg-c-blue" style="width:@isset($distancia)
+                                            <div class="progress-bar bg-c-blue" style="width:@if($distancia!= null)
                                                 {{ ($distancia* 100)/$total }}%
                                                 @else
                                                 0%
-                                            @endisset"></div>
+                                            @endif"></div>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-md-6">
@@ -76,11 +77,11 @@
                                         @endisset<span class="text-c-green m-l-10">para 200 pessoas</span>
                                         </h5>
                                         <div class="progress">
-                                            <div class="progress-bar bg-c-green" style="width:@isset($total)
+                                            <div class="progress-bar bg-c-green" style="width:@if($total!= null)
                                                 {{( $total*100 )/200 }}%
                                                 @else
                                                 0%
-                                            @endisset"></div>
+                                            @endif"></div>
                                         </div>
                                     </div>
 
@@ -103,6 +104,7 @@
                                 </div>
                             </div>
                             <div class="card-block">
+                                <span data-href="{{ route('exportCSV') }}" style="background-color: orange;color:white;"  class="btn btn btn justify-content-right" onclick ="exportTasks (event.target);">Exportar para Excel</span>
                                 <div class="table-responsive">
                                     <table id="table_id"
                                         class="display expandable-table table table-hover m-b-0 without-header">

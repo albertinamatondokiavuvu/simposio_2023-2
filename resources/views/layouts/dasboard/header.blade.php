@@ -5,13 +5,7 @@
     <title>Simposio - @yield('title')</title>
     <link href="/images/Logo_Simposio.png" rel="icon">
     <link href="/images/Logo_Simposio.png" rel="apple-touch-icon">
-    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 10]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
-    <!-- Meta -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -38,7 +32,12 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="/dashboard/assets/css/style.css">
 </head>
-
+<script>
+    function exportTasks(_this) {
+       let _url = $(_this).data('href');
+       window.location.href = _url;
+    }
+ </script>
 <body>
     <!-- Pre-loader start -->
     <div class="theme-loader">
@@ -139,15 +138,7 @@
                                 </a>
                                 <ul class="show-notification profile-notification">
 
-                                    <li class="waves-effect waves-light">
-                                        <a href="user-profile.html">
-                                            <i class="ti-user text-primary"></i> Perfil
-                                        </a>
-                                    </li>
-                                    <li class="waves-effect waves-light">
-                                        <a class="dropdown-item" data-toggle="modal" data-target="#edit-modal"><i
-                                            class=" ti-unlock text-primary"></i> Alterar Senha</a>
-                                    </li>
+
                                     <li class="waves-effect waves-light">
 
                                     <a href="{{ route('logout') }}"

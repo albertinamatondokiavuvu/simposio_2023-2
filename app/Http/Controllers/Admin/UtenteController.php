@@ -43,7 +43,7 @@ class UtenteController extends Controller
             ],
             $mensagens
         );
-           Utente::create([
+           $g =Utente::create([
                'nome'=>$request->nome,
                'email'=>$request->email,
                'PartipacaoExame'=>$request->PartipacaoExame,
@@ -55,10 +55,10 @@ class UtenteController extends Controller
                'Instituicao'=>$request->Instituicao,
                 'telefone'=>$request->telefone,
             ]);
+            $data['utentes']=$g;
             $data["bootstrap"] = file_get_contents("css/utentes/bootstrap.min.css");
             $data["css"] = file_get_contents("css/utentes/style.css");
-
-            $pdf = PDF::Loadview("pdfs/convite", $data)->setPaper('a4', 'landscape');
+            $pdf = PDF::Loadview("pdfs/convite", $data);
             Mail::send('mail.index', array(
 
                 'name' =>$request->nome,
@@ -68,10 +68,8 @@ class UtenteController extends Controller
                  ->to($request->email)
                  ->subject('Envio de confirmação e do convite')
                  ->attachData($pdf->output(),"convite.pdf");
-
              });
              return redirect()->back()->with('utenteadd','1');
-
     }
     public function list($id)
     {
@@ -112,7 +110,7 @@ class UtenteController extends Controller
         $mpdf = new \Mpdf\Mpdf([
             'mode' => 'utf-8', 'margin_top' => 0,
             'margin_left' => 0,
-            'margin_right' => 0, 'margin_bottom' => 0, 'format' => [210, 297]
+            'margin_right' => 0, 'margin_bottom' => 0, 'format' => [297, 210]
         ]);
         $mpdf->SetFont("arial");
         $mpdf->setHeader();
@@ -120,5 +118,40 @@ class UtenteController extends Controller
         $html = view("pdfs/certificado", $data);
         $mpdf->writeHTML($html);
         $mpdf->Output("utente.pdf", "I");
+    }
+    public function exportCSV(Request $request)
+{
+   $fileName = 'inscritos_simposio.csv';
+   $utentes = Utente::all();
+
+        $headers = array(
+            "Content-type"        => "text/csv",
+            "Content-Disposition" => "attachment; filename=$fileName",
+            "Pragma"              => "no-cache",
+            "Cache-Control"       => "must-revalidate, post-check=0, pre-check=0",
+            "Expires"             => "0"
+        );
+
+        $columns = array('Nome', 'Email', 'Telefone', 'Pais', 'Instituicao','Participacao');
+
+        $callback = function() use($utentes, $columns) {
+            $file = fopen('php://output', 'w');
+            fputcsv($file, $columns);
+
+            foreach ($utentes as $task) {
+                $row['Nome']  = $task->nome;
+                $row['Email']    = $task->email;
+                $row['Telefone']    = $task->telefone;
+                $row['Pais']  = $task->pais;
+                $row['Instituicao']  = $task->Instituicao;
+                $row['Participacao']  = $task->tipoParticpacao;
+
+                fputcsv($file, array($row['Nome'], $row['Email'], $row['Telefone'], $row['Pais'], $row['Instituicao'],$row['Participacao']));
+            }
+
+            fclose($file);
+        };
+
+        return response()->stream($callback, 200, $headers);
     }
 }

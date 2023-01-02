@@ -9,11 +9,14 @@
         <?php echo $bootstrap;
         echo $css;
         ?>
+
     </style>
 </head>
 
-<body style="font-size: 12pt; font-family:Georgia, 'Times New Roman', Times, serif;">
-<p>convite para actividade de simposio</p>
+<body style=" font-family:Georgia, 'Times New Roman', Times, serif;background: url('images/convite.png') no-repeat fixed center; background-size:contain;">
+
+
+</div>
 </body>
 
 </html>

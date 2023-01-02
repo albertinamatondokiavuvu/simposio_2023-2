@@ -21,12 +21,12 @@ class UserRequest extends FormRequest
      *
      * @return array
      */
-    
+
     public function rules()
     {
         return [
             'name' => ['required','max:100','min:3'],
-            'email' => ['required','email','unique:utentes'],
+            'email' => ['required','email','unique:users'],
         ];
 
     }
