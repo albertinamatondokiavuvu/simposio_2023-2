@@ -110,19 +110,19 @@ class UtenteController extends Controller
         $mpdf = new \Mpdf\Mpdf([
             'mode' => 'utf-8', 'margin_top' => 0,
             'margin_left' => 0,
-            'margin_right' => 0, 'margin_bottom' => 0, 'format' => [297, 210]
+            'margin_right' => 0, 'margin_bottom' => 0, 'format' => [210, 297]
         ]);
         $mpdf->SetFont("arial");
         $mpdf->setHeader();
         $mpdf->AddPage('L');
         $html = view("pdfs/certificado", $data);
         $mpdf->writeHTML($html);
-        $mpdf->Output("utente.pdf", "I");
+        $mpdf->Output("certificado.pdf", "I");
     }
     public function exportCSV(Request $request)
-{
-   $fileName = 'inscritos_simposio.csv';
-   $utentes = Utente::all();
+    {
+        $fileName = 'inscritos_simposio.csv';
+        $utentes = Utente::all();
 
         $headers = array(
             "Content-type"        => "text/csv",

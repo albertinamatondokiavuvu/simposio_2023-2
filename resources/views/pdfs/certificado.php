@@ -3,17 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-
+<style>
+    body
+    {
+        text-align: center;
+        font-size: 26pt;
+        font-weight: bold;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        background-color:#305aa8;
+    }
+</style>
     <title>Certificado</title>
-    <style>
-        <?php echo $bootstrap;
-        echo $css;
-        ?>
-    </style>
 </head>
-
-<body style="font-size: 12pt; font-family:Georgia, 'Times New Roman', Times, serif;">
-<p>certificado da actividade de simposio</p>
+<body>
+<img src="images/certificado.png" width="100%" height="100%" alt="" srcset="">
+<p style="margin-top:-43%; "><?php echo $utentes->nome?></p>
 </body>
-
 </html>

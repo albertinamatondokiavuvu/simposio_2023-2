@@ -3,8 +3,8 @@
 
 <head>
     <title>Simposio - @yield('title')</title>
-    <link href="/images/Logo_Simposio.png" rel="icon">
-    <link href="/images/Logo_Simposio.png" rel="apple-touch-icon">
+    <link href="/images/Logo Simposio.png" rel="icon">
+    <link href="/images/Logo Simposio.png" rel="apple-touch-icon">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -12,9 +12,7 @@
 
     <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
     <meta name="author" content="Codedthemes" />
-    <!-- Favicon icon -->
-    <link rel="icon" href="/dashboard/assets/images/favicon.ico" type="image/x-icon">
-    <!-- Google font-->
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <!-- waves.css -->
     <link rel="stylesheet" href="/dashboard/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
@@ -115,7 +113,7 @@
                             </div>
                         </div>
                         <a href="{{ route('inicio') }}">
-                            <p >Simpósio Internacional</p>
+                            <p>Simpósio Internacional</p>
                         </a>
                         <a class="mobile-options waves-effect waves-light">
                             <i class="ti-more"></i>
