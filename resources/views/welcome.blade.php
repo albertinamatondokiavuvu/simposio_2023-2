@@ -48,7 +48,7 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url(/assets/img/slide/slide-1.jpg);">
+          <div class="carousel-item active" style="background-image: url(/assets/img/slide/imagem1.png);">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"> Bem Vindo ao Simposio <span>Internacional</span></h2>
@@ -59,28 +59,22 @@
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url(/assets/img/slide/slide-2.jpg);">
+          <div class="carousel-item" style="background-image: url(/assets/img/slide/imagem2.png);">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">Simposio Internacional</h2>
-                <p class="animate__animated animate__fadeInUp">É um Evento que Visa...</p>
+                <p class="animate__animated animate__fadeInUp">Avaliação externa das aprendizagens em Angola: reflectir, agir e transformar</p>
                 <a href="{{ route('simposio') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Inscreva-se</a>
               </div>
             </div>
           </div>
-
-
-
         </div>
-
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bi bi-chevron-double-left" aria-hidden="true"></span>
         </a>
-
         <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
           <span class="carousel-control-next-icon bi bi-chevron-double-right" aria-hidden="true"></span>
         </a>
-
       </div>
     </div>
   </section><!-- End Hero -->
