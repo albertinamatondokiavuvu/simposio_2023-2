@@ -81,7 +81,7 @@
                             <div class="col-2">
 
                                 <div class="input-group">
-                                    <input   value="{{ old('pais') }}" class="input--style-2 " type="text" placeholder="pais" name="pais">
+                                    <input   value="{{ old('pais') }}" class="input--style-2 " type="text" placeholder="País" name="pais">
 
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                                 <div class="input-group">
 
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <input   value="{{ old('municipio') }}" class="input--style-2 " type="text" placeholder="municipio" name="municipio">
+                                        <input   value="{{ old('municipio') }}" class="input--style-2 " type="text" placeholder="Município" name="municipio">
 
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@
                             <div class="col-2">
 
                                 <div class="input-group">
-                                    <input   value="{{ old('provincia') }}" class="input--style-2 " type="text" placeholder="provincia" name="provincia">
+                                    <input   value="{{ old('provincia') }}" class="input--style-2 " type="text" placeholder="Província" name="provincia">
 
                                 </div>
                             </div>

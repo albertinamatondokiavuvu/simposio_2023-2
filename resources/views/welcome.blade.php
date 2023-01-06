@@ -48,7 +48,7 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url(/assets/img/slide/imagem1.png);">
+          <div class="carousel-item active" style="background-image: url(/images/fundo.jpeg);">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"> Bem Vindo ao Simposio <span>Internacional</span></h2>
@@ -59,7 +59,7 @@
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url(/assets/img/slide/imagem2.png);">
+          <div class="carousel-item" style="background-image: url(/images/fundo.jpeg);">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">Simposio Internacional</h2>

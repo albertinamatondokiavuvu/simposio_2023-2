@@ -24,7 +24,7 @@ Local: Memorial Dr. António Agostinho Neto</p>
 AVALIAÇÃO EXTERNA APRENDIZAGENS EM ANGOLA: <br>
 REFLECTIR, AGIR E TRANSFORMAR</P>
 
-<p style="background-color: rgba(192,192,192,0.5);"><span style="font-weight: bold;">OBS:</span> Deve traser esse documento, em formato digital ou físico, para receber as suas credenciais de acesso ao Evento.</p>
+<p style="background-color: rgba(192,192,192,0.5);"><span style="font-weight: bold;">OBS:</span> Deve trazer esse documento, em formato digital ou físico, para receber as suas credenciais de acesso ao Evento.</p>
 
 </div>
 </div>
