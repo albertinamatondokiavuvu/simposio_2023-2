@@ -38,7 +38,7 @@
                             <div class="card-block">
                                 <div class="row">
                                     <div class="col-xl-4 col-md-6">
-                                        <h6>Usuários Presenciais</h6>
+                                        <h6>Usuários Presenciais </h6>
                                         <h5 class="m-b-30 f-w-700">@isset($presencial)
                                             {{ $presencial }}
                                         @endisset<span class="text-c-green m-l-10">de @isset($total)
@@ -53,6 +53,8 @@
                                                 0%
                                             @endif"></div>
                                         </div>
+                                        <br>
+                                        <a class="btn btn-primary" target="_blank" href="{{ route('presencial') }}">Imprimir</a>
                                     </div>
                                     <div class="col-xl-4 col-md-6">
                                         <h6>Usuários à distância</h6>
@@ -69,6 +71,8 @@
                                                 0%
                                             @endif"></div>
                                         </div>
+                                        <br>
+                                        <a class="btn btn-primary" target="_blank" href="{{ route('distancia') }}">Imprimir</a>
                                     </div>
                                     <div class="col-xl-4 col-md-6">
                                         <h6>Total de Usuários Inscritos</h6>
@@ -83,6 +87,8 @@
                                                 0%
                                             @endif"></div>
                                         </div>
+                                        <br>
+                                        <a class="btn btn-primary" target="_blank" href="{{ route('geral') }}">Imprimir</a>
                                     </div>
 
                                 </div>

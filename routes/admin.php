@@ -18,4 +18,7 @@ Route::get('/simposio/listar/{id}',[UtenteController::class,'list'])->name('list
 Route::get('/simposio/cartao/{id}',[UtenteController::class,'cartao'])->name('cartaoSimposio');
 Route::get('/simposio/certificado/{id}',[UtenteController::class,'certificado'])->name('certificadoSimposio');
 Route::get('/simposio/exportCSV',[UtenteController::class,'exportCSV'])->name('exportCSV');
+Route::get('/simposio/presencial',[UtenteController::class,'Presencial'])->name('presencial');
+Route::get('/simposio/distancia',[UtenteController::class,'Distancia'])->name('distancia');
+Route::get('/simposio/geral',[UtenteController::class,'Geral'])->name('geral');
 });

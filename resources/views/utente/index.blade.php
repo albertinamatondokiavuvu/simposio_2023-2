@@ -50,7 +50,7 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input  value="{{ old('nome') }}" class="input--style-2 " type="text" placeholder="Nome" name="nome">
+                                    <input  value="{{ old('nome') }}" class="input--style-2 " type="text" placeholder="Nome Completo" name="nome">
                                 </div>
                             </div>
                             <div class="col-2">
@@ -186,8 +186,15 @@
             })
         </script>
     @endif
+    @if (session('presencial'))
+    <script>
+        swal('Lamentamos!', 'Todos os lugares estão preenchido para a participação presencial,Tente a participação à distância' , 'error', {
+            button: 'Ok'
+        })
+    </script>
+    @endif
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 
 </html>
 <!-- end document-->
